@@ -17,6 +17,7 @@ import { Canvas, useFrame } from 'react-three-fiber'
 
 import FiberFrame from "./reactThreeFiberDemo"
 
+
 // 
 
 const socket = io.connect('http://localhost:8000');
@@ -119,7 +120,8 @@ function App() {
               />
 
             )}
-              <FiberFrame/>
+            <FiberFrame/>
+              
           </div>
           <div className='video'>
             {callAccepted && !callEnded ? (

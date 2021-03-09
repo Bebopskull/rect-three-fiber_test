@@ -18,7 +18,7 @@ function Box(props) {
   })
   // const [colorShiftMaterial] = useState(() => {
 
-    
+
   // })
   
 
@@ -40,8 +40,10 @@ function Box(props) {
           uniforms-texture2-value={texture2}
           uniforms-disp-value={dispTexture}
           uniforms-dispFactor-value={0.5} />*/}
+      {/*<colorShiftMaterial attach="material" color="hotpink" time={1} />*/}
 
     </mesh>
+
     
   )
 }
