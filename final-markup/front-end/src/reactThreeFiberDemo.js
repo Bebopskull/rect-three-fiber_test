@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react'
-import { Canvas, useFrame, useLoader, useThree  } from 'react-three-fiber'
+import { Canvas, useFrame, useLoader, useThree, drei } from 'react-three-fiber'
 import * as THREE from 'three';
 import { extend } from 'react-three-fiber'
 import glsl from 'babel-plugin-glsl/macro'
-// import shaders from './shaders.jsx'
-// import { ImageFadeMaterial } from './fragmentShader.js'
+import shaders from './shaders.jsx'
+import { rawShaderMaterial } from './fragmentShader.js'
+
+
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -20,6 +22,9 @@ function Box(props) {
 
 
   // })
+
+  // const [texture1,] = useLoader(THREE.TextureLoader, [myVideo])
+
   
 
   return (
@@ -32,6 +37,7 @@ function Box(props) {
       onPointerOut={(e) => setHover(false)}>
       <planeBufferGeometry args={[7, 7]} />
       <meshStandardMaterial color={ 'hotpink' } />
+      {/*<rawShaderMaterial imageFadeMaterial ref={ref} attach="material" tex={texture1}/>*/}
       {/*<colorShiftMaterial attach="material" color="hotpink" time={1} />*/}
       {/*<colorMaterial color="#203050" />*/}
       {/*<shaderMaterial
@@ -41,7 +47,7 @@ function Box(props) {
           uniforms-disp-value={dispTexture}
           uniforms-dispFactor-value={0.5} />*/}
       {/*<colorShiftMaterial attach="material" color="hotpink" time={1} />*/}
-
+      // {console.log("ALL FROM THREE", THREE)}
     </mesh>
 
     

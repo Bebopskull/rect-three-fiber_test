@@ -1,10 +1,10 @@
 import * as THREE from "three"
 import React, { useRef } from "react"
-import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
-import { shaderMaterial } from "drei"
+import { Canvas, extend, useFrame, useThree, drei } from "react-three-fiber"
+// import { shaderMaterial } from "drei"
 import glsl from "babel-plugin-glsl/macro"
 
-const ColorMaterial = shaderMaterial(
+const ColorMaterial = ShaderMaterial(
   { time: 0, color: new THREE.Color(0.2, 0.0, 0.1) },
   // the tag is optional, it allows the VSC to syntax highlibht and lint glsl,
   // also allows imports and other things

@@ -3,7 +3,7 @@ import { Canvas, useFrame, useLoader, useThree  } from 'react-three-fiber'
 import * as THREE from 'three';
 import { extend } from 'react-three-fiber'
 import glsl from 'babel-plugin-glsl/macro'
-import shaders from './shaders.jsx'
+
 // import { shaderMaterial } from "drei"
 
 
