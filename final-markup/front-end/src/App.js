@@ -18,9 +18,12 @@ import { Canvas, useFrame } from 'react-three-fiber'
 import FiberFrame from "./reactThreeFiberDemo"
 
 
+
+
 // 
 
 const socket = io.connect('http://localhost:8000');
+console.log("IO object ====> ", io)
 function App() {
   const [me, setMe] = useState('');
   const [stream, setStream] = useState();
@@ -103,6 +106,8 @@ function App() {
     setCallEnded(true);
     connectionRef.current.destroy();
   };
+
+
 
   return (
     <>
